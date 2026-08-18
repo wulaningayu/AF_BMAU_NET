@@ -1,0 +1,10 @@
+# AF-BMAU-Net trained with dice loss, batch size 8, 25 epochs.
+# Only fields that differ from configs/default.yaml need to be listed.
+name: af_bmau_net_dice
+
+models_to_run:
+  - AF_BMAU_Net
+
+loss_name: dice
+batch_size: 8
+epochs: 25

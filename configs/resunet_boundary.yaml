@@ -1,0 +1,10 @@
+# Residual U-Net trained with boundary loss, batch size 8, 25 epochs.
+# Only fields that differ from configs/default.yaml need to be listed.
+name: resunet_boundary
+
+models_to_run:
+  - ResUNet
+
+loss_name: boundary
+batch_size: 8
+epochs: 25

@@ -1,0 +1,11 @@
+# Fast sanity-check run: small images, one epoch pass, single fold.
+# Only fields that differ from configs/default.yaml need to be listed.
+name: debug
+
+image_size: 256
+batch_size: 1
+epochs: 3
+num_folds: 2
+
+models_to_run:
+  - UNet

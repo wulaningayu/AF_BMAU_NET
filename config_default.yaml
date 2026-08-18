@@ -1,0 +1,59 @@
+# Full comparative experiment: U-Net, U-Net++, ResUNet, AF-BMAU-Net.
+# Any field left out here falls back to the default in af_bmau_net/config.py.
+name: default
+
+image_dir: data/images
+mask_dir: data/masks
+output_dir: outputs
+
+image_size: 256
+batch_size: 8
+epochs: 50
+
+num_folds: 5
+learning_rate: 0.0001
+weight_decay: 0.00001
+power: 0.9
+threshold: 0.5
+
+num_workers: 2
+
+image_prefix: CEO
+mask_suffix: _mask
+
+seed: 42
+base_channels: 64
+deep_supervision: true
+use_augmentation: true
+use_postprocessing: true
+morph_kernel_size: 10
+
+# Mixed precision (autocast + GradScaler) to cut GPU memory usage. Only
+# takes effect on CUDA.
+use_amp: true
+
+# One of: dice, focal, boundary, hybrid (dice + focal + boundary below)
+loss_name: hybrid
+
+lambda_dice: 0.5
+lambda_focal: 0.3
+lambda_boundary: 0.2
+
+focal_alpha: 0.25
+focal_gamma: 2.0
+
+models_to_run:
+  - UNet
+  - UNetPP
+  - ResUNet
+  - AF_BMAU_Net
+
+model_display_names:
+  UNet: U-Net
+  UNetPP: U-Net++
+  ResUNet: Residual U-Net
+  AF_BMAU_Net: AF-BMAU-Net
+
+save_comparison_panels: true
+comparison_panel_width: 320
+show_gt_on_overlay: false

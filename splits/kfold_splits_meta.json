@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-07-06T12:01:10",
+  "num_samples": 720,
+  "num_folds": 5,
+  "seed": 42,
+  "image_dir": "/Users/msw/Developer/dikti-2026-angga-segmentation/data/images",
+  "mask_dir": "/Users/msw/Developer/dikti-2026-angga-segmentation/data/masks",
+  "image_prefix": "CEO",
+  "mask_suffix": "_mask"
+}

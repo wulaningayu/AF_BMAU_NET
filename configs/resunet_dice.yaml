@@ -1,0 +1,10 @@
+# Residual U-Net trained with dice loss, batch size 8, 25 epochs.
+# Only fields that differ from configs/default.yaml need to be listed.
+name: resunet_dice
+
+models_to_run:
+  - ResUNet
+
+loss_name: dice
+batch_size: 8
+epochs: 25

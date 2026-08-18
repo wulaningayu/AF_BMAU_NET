@@ -1,0 +1,10 @@
+# U-Net++ trained with focal loss, batch size 8, 25 epochs.
+# Only fields that differ from configs/default.yaml need to be listed.
+name: unetpp_focal
+
+models_to_run:
+  - UNetPP
+
+loss_name: focal
+batch_size: 8
+epochs: 25
